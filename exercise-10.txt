@@ -1,0 +1,43 @@
+mysql> CREATE DATABASE hotel_beatty;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE hotel_beatty;
+Database changed
+
+mysql> CREATE TABLE floor (
+    -> id INT
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE room (
+    -> floorID INT, 
+    -> id INT, 
+    -> type ENUM('guest', 'pool', 'bar', 'janitor'), 
+    -> carpet ENUM('true', 'false'), 
+    -> windows INT
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE guests (
+    -> reservationId INT, 
+    -> id INT
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE reservations (
+    -> guestId INT, 
+    -> id INT, 
+    -> checkIn DATE, 
+    -> checkOut DATE
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> ALTER TABLE room
+    -> ADD kitchen ENUM('true', 'false');
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE room 
+    -> ADD guestsAllowed INT;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0

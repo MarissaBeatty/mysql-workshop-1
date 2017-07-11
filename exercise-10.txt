@@ -6,7 +6,7 @@ Database changed
 
 mysql> CREATE TABLE floor (
     -> id INT
-    -> );
+    -> );git 
 Query OK, 0 rows affected (0.02 sec)
 
 mysql> CREATE TABLE room (
@@ -41,3 +41,14 @@ mysql> ALTER TABLE room
     -> ADD guestsAllowed INT;
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SHOW TABLES;
++------------------------+
+| Tables_in_hotel_beatty |
++------------------------+
+| floor                  |
+| guests                 |
+| reservations           |
+| room                   |
++------------------------+
+4 rows in set (0.00 sec)
